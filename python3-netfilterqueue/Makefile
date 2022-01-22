@@ -4,18 +4,16 @@ PKG_NAME:=python3-netfilterqueue
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 
-PYPI_NAME:=NetfilterQueue
-PKG_HASH:=507be475d8c9f98834763aacf2f6cfe800b253ccd283f14f3d6f89a4f87a5878
-
-PKG_MAINTAINER:=Josef Schlehofer <josef.schlehofer@nic.cz>
-PKG_LICENSE:=MIT
-PKG_LICENSE_FILES:=LICENSE.txt
+PKG_SOURCE:=NetfilterQueue-1.0.0.tar.gz
+PKG_SOURCE_URL:=https://files.pythonhosted.org/packages/52/40/cc706275da4c9b968ce1223f586e0ab6ef20f3f6e840724b43070e85234e/
+PKG_SOURCE_VERSION:=1.0.0
+PKG_SOURCE_SUBDIR:=python3-netfilterqueue-1.0.0
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/
 
 HOST_PYTHON3_PACKAGE_BUILD_DEPENDS:=Cython
 
-include ../pypi.mk
 include $(INCLUDE_DIR)/package.mk
-include ../python3-package.mk
+include $(TOPDIR)/feeds/packages/lang/python/python3-package.mk
 
 define Package/python3-netfilterqueue
   SECTION:=lang
@@ -30,6 +28,5 @@ define Package/python3-netfilterqueue/description
   NetfilterQueue binding for Python
 endef
 
-$(eval $(call Py3Package,python3-netfilterqueue))
-$(eval $(call BuildPackage,python3-netfilterqueue))
-$(eval $(call BuildPackage,python3-netfilterqueue-src))
+$(eval $(call Py3Packageython3-netfilterqueue))
+$(eval $(call BuildPackageython3-netfilterqueue))
