@@ -17,7 +17,7 @@ include ../pypi.mk
 include $(INCLUDE_DIR)/package.mk
 include ../python3-package.mk
 
-define Package/python3-yaml
+define Package/python3-netfilterqueue
   SECTION:=lang
   CATEGORY:=Languages
   SUBMENU:=Python
